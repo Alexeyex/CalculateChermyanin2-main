@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/usualLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="end|center"
+            android:padding="24dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/firstLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/first_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/secondLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/secondLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/second_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/thirdLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/firstLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/thirdLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/third_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fourthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/secondLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fourthLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/fourth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/thirdLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fifthLetter"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/fifth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/sixthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/fourthLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sixthLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/sixth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/seventhLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/fifthLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/seventhLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/seventh_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/eighthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/sixthLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eighthLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/eighth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/ninthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/seventhLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ninthLetter"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/ninth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/tenthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/eighthLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tenthLetter"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/tenth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/ninthLetter"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/firstLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/first_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/secondLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/secondLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/second_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/thirdLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/firstLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/thirdLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/third_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fourthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/secondLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fourthLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/fourth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fifthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/thirdLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fifthLetters"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/fifth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/sixthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/fourthLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sixthLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/sixth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/seventhLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/fifthLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/seventhLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/seventh_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/eighthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/sixthLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eighthLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/eighth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/ninthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/seventhLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ninthLetters"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/ninth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/tenthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/eighthLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tenthLetters"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="@string/tenth_letter"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/fifthLetters"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/ninthLetters"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/resultTv"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/eraseBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="clearField"
+                android:text="C"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/changeSignBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="+/-"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/percentageBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="countPercent"
+                android:text="%"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/divisionBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:onClick="countOperation"
+                android:text="/"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/secondRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/firstRowLayout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sevenBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/eightBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/nineBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/multiBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:onClick="countOperation"
+                android:text="*"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/secondRowLayout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fourBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/fiveBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/sixBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/minusBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:onClick="countOperation"
+                android:text="-"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourthRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/thirdRowLayout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/oneBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/twoBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/threeBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/plusBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:onClick="countOperation"
+                android:text="+"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fifthRowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/fourthRowLayout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/zeroBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="2"
+                android:onClick="writeNumbers"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/decimalBtn"
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="writeNumbers"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/equallyBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange"
+                android:onClick="opEqual"
+                android:text="="
+                android:textSize="30sp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/switchBtn"
+            android:text="switch"
+            android:layout_gravity="center|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:id="@+id/unusualLayout"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/usualsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resusltTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="end|center"
+                    android:padding="24dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/firstsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/first_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/secondsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/secondsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/second_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/thirdsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/firstsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/thirdsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/third_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/fourthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/secondsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/fourthsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/fourth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/fifthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/thirdsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/fifthsLetter"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/fifth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/sixthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/fourthsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/sixthsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/sixth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/seventhsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/fifthsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/seventhsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/seventh_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/eighthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/sixthsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eighthsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/eighth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/ninthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/seventhsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ninthsLetter"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/ninth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tenthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/eighthsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tenthsLetter"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:text="@string/tenth_letter"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toStartOf="@+id/fifthsLetter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/ninthsLetter"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/firstRowsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/resultTv"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/erasesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="clearField"
+                        android:text="C"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/changeSignsBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="+/-"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/percentagesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="countPercent"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/divisionsBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/orange"
+                        android:onClick="countOperation"
+                        android:text="/"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/secondRowsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/firstRowsLayout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sevensBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="7"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/eightsBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+
+                        android:text="8"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/ninesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/multisBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/orange"
+                        android:onClick="countOperation"
+                        android:text="*"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thirdRowsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/secondRowsLayout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/foursBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/fivesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/sixsBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="6"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/minussBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/orange"
+                        android:onClick="countOperation"
+                        android:text="-"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourthRowsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/thirdRowsLayout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/onesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/twosBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/threesBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/plussBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/orange"
+                        android:onClick="countOperation"
+                        android:text="+"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fifthRowsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/fourthRowsLayout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/zerosBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="2"
+                        android:onClick="writeNumbers"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/decimalsBtn"
+                        android:layout_width="0dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="writeNumbers"
+                        android:text="."
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/equallysBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/orange"
+                        android:onClick="opEqual"
+                        android:text="="
+                        android:textSize="30sp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/switchsBtn"
+                    android:text="switch"
+                    android:layout_gravity="center|bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+</FrameLayout>

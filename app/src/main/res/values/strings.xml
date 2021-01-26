@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CalculateChermyanin</string>
+    <string name="first_letter">C</string>
+    <string name="second_letter">H</string>
+    <string name="third_letter">E</string>
+    <string name="fourth_letter">R</string>
+    <string name="fifth_letter">M</string>
+    <string name="sixth_letter">Y</string>
+    <string name="seventh_letter">A</string>
+    <string name="eighth_letter">N</string>
+    <string name="ninth_letter">I</string>
+    <string name="tenth_letter">N</string>
+</resources>
