@@ -11,11 +11,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <TextView
             android:id="@+id/resultTv"
             android:layout_width="match_parent"
@@ -28,7 +23,12 @@
             android:textColor="@color/white"
             android:textSize="30sp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/firstsLetters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -45,9 +45,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/secondLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/secondLetter"
@@ -62,9 +62,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/thirdLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/firstLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/thirdLetter"
@@ -79,9 +79,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/fourthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/secondLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/fourthLetter"
@@ -96,9 +96,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/thirdLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/fifthLetter"
@@ -113,9 +113,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/sixthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/fourthLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/sixthLetter"
@@ -130,9 +130,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/seventhLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/fifthLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/seventhLetter"
@@ -147,9 +147,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/eighthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/sixthLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/eighthLetter"
@@ -164,9 +164,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/ninthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/seventhLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/ninthLetter"
@@ -181,9 +181,9 @@
                 app:layout_constraintEnd_toStartOf="@+id/tenthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/eighthLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/tenthLetter"
@@ -198,186 +198,168 @@
                 app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@+id/ninthLetter"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/secondsLetters"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/firstLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/first_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/secondLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/secondLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/secondLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/second_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/thirdLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/firstLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/firstLetters"
+                app:layout_constraintBottom_toTopOf="@id/thirdLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/thirdLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/third_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/fourthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/secondLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/secondLetters"
+                app:layout_constraintBottom_toTopOf="@id/fourthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <TextView
                 android:id="@+id/fourthLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/fourth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/fifthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/thirdLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/thirdLetters"
+                app:layout_constraintBottom_toTopOf="@id/fifthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/fifthLetters"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/fifth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/sixthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/fourthLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/fourthLetters"
+                app:layout_constraintBottom_toTopOf="@id/sixthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/sixthLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/sixth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/seventhLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/fifthLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/fifthLetters"
+                app:layout_constraintBottom_toTopOf="@id/seventhLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/seventhLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/seventh_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/eighthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/sixthLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/sixthLetters"
+                app:layout_constraintBottom_toTopOf="@id/eighthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/eighthLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/eighth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/ninthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/seventhLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/seventhLetters"
+                app:layout_constraintBottom_toTopOf="@id/ninthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/ninthLetters"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/ninth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/tenthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/eighthLetters"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/eighthLetters"
+                app:layout_constraintBottom_toTopOf="@id/tenthLetters"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <TextView
                 android:id="@+id/tenthLetters"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/tenth_letter"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/fifthLetters"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintStart_toEndOf="@+id/ninthLetters"
-                app:layout_constraintTop_toTopOf="parent" />
-        </LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/ninthLetters"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/firstRowLayout"
@@ -431,7 +413,6 @@
                 android:text="/"
                 android:textSize="30sp" />
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/secondRowLayout"
@@ -641,9 +622,7 @@
             android:layout_gravity="center|bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:visibility="invisible"
