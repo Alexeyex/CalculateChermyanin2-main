@@ -28,11 +28,10 @@ public class MainActivity extends AppCompatActivity {
                     unusual.setVisibility(View.VISIBLE);
                     isUsual = false;
                 }
-
             }
         });
 
-        findViewById(R.id.switchsBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.newSwitchBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isUsual) {

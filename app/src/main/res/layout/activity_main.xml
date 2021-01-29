@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/usualLayout"
@@ -13,24 +14,27 @@
 
         <TextView
             android:id="@+id/resultTv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/black"
             android:gravity="end|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:padding="24dp"
             android:text="0"
             android:textColor="@color/white"
             android:textSize="30sp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/firstsLetters"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resultTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultTv"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/firstLetter"
@@ -41,7 +45,7 @@
                 android:padding="10dp"
                 android:text="@string/first_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/secondLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -58,7 +62,7 @@
                 android:padding="10dp"
                 android:text="@string/second_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/thirdLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -75,7 +79,7 @@
                 android:padding="10dp"
                 android:text="@string/third_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/fourthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -92,7 +96,7 @@
                 android:padding="10dp"
                 android:text="@string/fourth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -109,7 +113,7 @@
                 android:padding="10dp"
                 android:text="@string/fifth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/sixthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -126,7 +130,7 @@
                 android:padding="10dp"
                 android:text="@string/sixth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/seventhLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -143,7 +147,7 @@
                 android:padding="10dp"
                 android:text="@string/seventh_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/eighthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -160,7 +164,7 @@
                 android:padding="10dp"
                 android:text="@string/eighth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/ninthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -177,7 +181,7 @@
                 android:padding="10dp"
                 android:text="@string/ninth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/tenthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -194,7 +198,7 @@
                 android:padding="10dp"
                 android:text="@string/tenth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toStartOf="@+id/fifthLetter"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
@@ -206,8 +210,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/secondsLetters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstsLetters">
 
             <TextView
                 android:id="@+id/firstLetters"
@@ -217,11 +225,11 @@
                 android:padding="10dp"
                 android:text="@string/first_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@+id/secondLetters"
-                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
@@ -232,12 +240,12 @@
                 android:padding="10dp"
                 android:text="@string/second_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@id/firstLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/thirdLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/firstLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/thirdLetters"
@@ -247,12 +255,12 @@
                 android:padding="10dp"
                 android:text="@string/third_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/secondLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/fourthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/secondLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/fourthLetters"
@@ -262,12 +270,12 @@
                 android:padding="10dp"
                 android:text="@string/fourth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/thirdLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/fifthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/thirdLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/fifthLetters"
@@ -277,12 +285,12 @@
                 android:padding="10dp"
                 android:text="@string/fifth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/fourthLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/sixthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/fourthLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/sixthLetters"
@@ -292,12 +300,12 @@
                 android:padding="10dp"
                 android:text="@string/sixth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/fifthLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/seventhLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/fifthLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/seventhLetters"
@@ -307,12 +315,12 @@
                 android:padding="10dp"
                 android:text="@string/seventh_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/sixthLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/eighthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/sixthLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/eighthLetters"
@@ -322,27 +330,27 @@
                 android:padding="10dp"
                 android:text="@string/eighth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/seventhLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/ninthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/seventhLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/ninthLetters"
-                android:layout_width="30dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="10dp"
                 android:text="@string/ninth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/eighthLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toTopOf="@id/tenthLetters"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/eighthLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
 
             <TextView
                 android:id="@+id/tenthLetters"
@@ -352,26 +360,43 @@
                 android:padding="10dp"
                 android:text="@string/tenth_letter"
                 android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:layout_constraintTop_toBottomOf="@+id/ninthLetters"
+                android:textSize="27sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/ninthLetters"
+                app:layout_constraintVertical_chainStyle="spread" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/r0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/firstsLetters"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondsLetters"
+        app:layout_constraintTop_toBottomOf="@+id/firstsLetters">
+
+    <LinearLayout
+        android:id="@+id/column"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/firstRowLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/resultTv"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/eraseBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -382,7 +407,7 @@
 
             <Button
                 android:id="@+id/changeSignBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -393,7 +418,7 @@
 
             <Button
                 android:id="@+id/percentageBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="countPercent"
@@ -403,7 +428,7 @@
 
             <Button
                 android:id="@+id/divisionBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -417,14 +442,14 @@
         <LinearLayout
             android:id="@+id/secondRowLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:layout_below="@+id/firstRowLayout"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/sevenBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -435,19 +460,18 @@
 
             <Button
                 android:id="@+id/eightBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
                 android:onClick="writeNumbers"
-
                 android:text="8"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <Button
                 android:id="@+id/nineBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="writeNumbers"
@@ -457,7 +481,7 @@
 
             <Button
                 android:id="@+id/multiBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -471,14 +495,13 @@
         <LinearLayout
             android:id="@+id/thirdRowLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/secondRowLayout"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/fourBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -489,7 +512,7 @@
 
             <Button
                 android:id="@+id/fiveBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -500,7 +523,7 @@
 
             <Button
                 android:id="@+id/sixBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="writeNumbers"
@@ -510,7 +533,7 @@
 
             <Button
                 android:id="@+id/minusBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -524,14 +547,13 @@
         <LinearLayout
             android:id="@+id/fourthRowLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/thirdRowLayout"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/oneBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -542,7 +564,7 @@
 
             <Button
                 android:id="@+id/twoBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
@@ -553,7 +575,7 @@
 
             <Button
                 android:id="@+id/threeBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="writeNumbers"
@@ -563,7 +585,7 @@
 
             <Button
                 android:id="@+id/plusBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -577,17 +599,16 @@
         <LinearLayout
             android:id="@+id/fifthRowLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_below="@+id/fourthRowLayout"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/zeroBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="0.66"
                 android:layout_marginRight="4dp"
-                android:layout_weight="2"
                 android:onClick="writeNumbers"
                 android:text="0"
                 android:textColor="@color/black"
@@ -595,18 +616,17 @@
 
             <Button
                 android:id="@+id/decimalBtn"
-                android:layout_width="0dp"
-
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:onClick="writeNumbers"
+                android:layout_weight="1"
                 android:text="."
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <Button
                 android:id="@+id/equallyBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -616,12 +636,15 @@
                 android:text="="
                 android:textSize="30sp" />
         </LinearLayout>
+
         <Button
             android:id="@+id/switchBtn"
             android:text="switch"
             android:layout_gravity="center|bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -637,463 +660,640 @@
             android:layout_height="match_parent"
             tools:context=".MainActivity">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/resultsTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="end|center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="24dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newFirstsLetters"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resultsTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultsTv"
+                android:padding="5dp">
 
                 <TextView
-                    android:id="@+id/resusltTv"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="@color/black"
-                    android:gravity="end|center"
-                    android:padding="24dp"
-                    android:text="0"
-                    android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:id="@+id/newFirstLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/first_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/newSecondLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/newSecondLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/second_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newThirdLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newFirstLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/firstsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/first_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/secondsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newThirdLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/third_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newFourthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newSecondLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/secondsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/second_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/thirdsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/firstsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newFourthLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/fourth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newFifthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newThirdLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/thirdsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/third_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/fourthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/secondsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newFifthLetter"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/fifth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newSixthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newFourthLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/fourthsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/fourth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/fifthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/thirdsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newSixthLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/sixth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newSeventhLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newFifthLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/fifthsLetter"
-                        android:layout_width="45dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/fifth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/sixthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/fourthsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newSeventhLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/seventh_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newEighthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newSixthLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/sixthsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/sixth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/seventhsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/fifthsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newEighthLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/eighth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newNinthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newSeventhLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/seventhsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/seventh_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/eighthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/sixthsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/newNinthLetter"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/ninth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newTenthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newEighthLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <TextView
-                        android:id="@+id/eighthsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/eighth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/ninthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/seventhsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/ninthsLetter"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/ninth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/tenthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/eighthsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tenthsLetter"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:background="@color/white"
-                        android:padding="10dp"
-                        android:text="@string/tenth_letter"
-                        android:textColor="@color/black"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toStartOf="@+id/fifthsLetter"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintVertical_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/ninthsLetter"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/newTenthLetter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/tenth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintEnd_toStartOf="@+id/newFifthLetter"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/newNinthLetter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                <LinearLayout
-                    android:id="@+id/firstRowsLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_below="@+id/resultTv"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newSecondsLetters"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newFirstsLetters">
 
-                    <Button
-                        android:id="@+id/erasesBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="clearField"
-                        android:text="C"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newFirstLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/first_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@+id/newSecondLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/changeSignsBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="+/-"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newSecondLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/second_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newThirdLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/newFirstLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/percentagesBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="countPercent"
-                        android:text="%"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newThirdLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/third_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newFourthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newSecondLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/divisionsBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/orange"
-                        android:onClick="countOperation"
-                        android:text="/"
-                        android:textSize="30sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/newFourthLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/fourth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newFifthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newThirdLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                <LinearLayout
-                    android:id="@+id/secondRowsLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_below="@+id/firstRowsLayout"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/newFifthLetters"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/fifth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newSixthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newFourthLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/sevensBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="7"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newSixthLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/sixth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newSeventhLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newFifthLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/eightsBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
+                <TextView
+                    android:id="@+id/newSeventhLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/seventh_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newEighthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newSixthLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                        android:text="8"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newEighthLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/eighth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newNinthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newSeventhLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/ninesBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="9"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/newNinthLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="12dp"
+                    android:text="@string/ninth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toTopOf="@id/newTenthLetters"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newEighthLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
 
-                    <Button
-                        android:id="@+id/multisBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/orange"
-                        android:onClick="countOperation"
-                        android:text="*"
-                        android:textSize="30sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/newTenthLetters"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/tenth_letter"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/newNinthLetters"
+                    app:layout_constraintVertical_chainStyle="spread" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:id="@+id/thirdRowsLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_below="@+id/secondRowsLayout"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/foursBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="4"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/fivesBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="5"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/sixsBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="6"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/minussBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/orange"
-                        android:onClick="countOperation"
-                        android:text="-"
-                        android:textSize="30sp" />
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/r1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/newFirstsLetters"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/newSecondsLetters"
+                app:layout_constraintTop_toBottomOf="@+id/newFirstsLetters">
 
                 <LinearLayout
-                    android:id="@+id/fourthRowsLayout"
+                    android:id="@+id/newColumn"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_below="@+id/thirdRowsLayout"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/onesBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="1"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/twosBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="2"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/threesBtn"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:id="@+id/newFirstRowLayout"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="3"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/newEraseBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="clearField"
+                            android:text="C"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newChangeSignBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="+/-"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newPercentageBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="countPercent"
+                            android:text="%"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newDivisionBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:onClick="countOperation"
+                            android:text="/"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/newSecondRowLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/newFfirstRowLayout"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/newSevenBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="7"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newEightBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="8"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newNineBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="9"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newMultiBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:onClick="countOperation"
+                            android:text="*"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/newThirdRowLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/newFourBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newFiveBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newSixBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="6"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newMinusBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:onClick="countOperation"
+                            android:text="-"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/newFourthRowLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/newOneBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newTwoBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newThreeBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="writeNumbers"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newPlusBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:onClick="countOperation"
+                            android:text="+"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/newFifthRowLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/newZeroBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.66"
+                            android:layout_marginRight="4dp"
+                            android:onClick="writeNumbers"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newDecimalBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="writeNumbers"
+                            android:layout_weight="1"
+                            android:text="."
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <Button
+                            android:id="@+id/newEquallyBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/orange"
+                            android:onClick="opEqual"
+                            android:text="="
+                            android:textSize="30sp" />
+                    </LinearLayout>
 
                     <Button
-                        android:id="@+id/plussBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/orange"
-                        android:onClick="countOperation"
-                        android:text="+"
-                        android:textSize="30sp" />
+                        android:id="@+id/newSwitchBtn"
+                        android:text="switch"
+                        android:layout_gravity="center|bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/fifthRowsLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_below="@+id/fourthRowsLayout"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/zerosBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="2"
-                        android:onClick="writeNumbers"
-                        android:text="0"
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/decimalsBtn"
-                        android:layout_width="0dp"
-
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="writeNumbers"
-                        android:text="."
-                        android:textColor="@color/black"
-                        android:textSize="30sp" />
-
-                    <Button
-                        android:id="@+id/equallysBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/orange"
-                        android:onClick="opEqual"
-                        android:text="="
-                        android:textSize="30sp" />
-                </LinearLayout>
-                <Button
-                    android:id="@+id/switchsBtn"
-                    android:text="switch"
-                    android:layout_gravity="center|bottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </LinearLayout>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
